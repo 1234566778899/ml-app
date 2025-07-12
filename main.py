@@ -11,7 +11,6 @@ from fastapi.middleware.cors import CORSMiddleware
 # === 1. Definir los modelos ===
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-
 class GraphSAGE(torch.nn.Module):
     def __init__(self, in_channels, out_channels, hidden_channels=8):
         super(GraphSAGE, self).__init__()
